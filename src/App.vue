@@ -1,3 +1,10 @@
+<!-- 
+ * install json-server: npm i json-server
+ * create "db.json" under "data" folder
+ * watch db.json: json-server --watch data/db.json OR ADD following command to package.json -> scripts
+    "db:serve": "json-server --watch data/db.json --port=3001",
+-->
+
 <template>
   <nav>
     <!-- Because of router links vue will intercept requests and process
