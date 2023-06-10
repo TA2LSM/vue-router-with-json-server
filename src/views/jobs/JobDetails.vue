@@ -21,7 +21,8 @@ export default {
   },
 
   mounted() {
-    fetch('http://localhost:3001/jobs/' + this.id)
+    const dbURL = "http://localhost:3001/jobs/";
+    fetch(dbURL + this.id)
       .then(res => res.json())
       .then(data => this.job = data)
       .catch(err => console.log(err.message))
