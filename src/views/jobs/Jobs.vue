@@ -13,21 +13,42 @@
 </template>
 
 <script>
+// import someFunction from './calculate/price'
+// 
+// export default {
+  //--- Composition API ------------------------
+  // setup() {
+    // data
+    // methods
+    // computed
+    // lifecycle hooks
+    // const data = someFunction()
+  // }
+  //--------------------------------------------
+// }
+
+// OR
+
 export default {
-  
+  //--- Options API ----------------------------
   data() {
     return {
       jobs: []
     }
   },
+  
+  // methods { foo() {} },
+  // computed { foo() {} },
 
+  //--- Lifecycle Hooks
   mounted() {
     const dbURL = "http://localhost:3001/jobs";
     fetch(dbURL)
-      .then(res => res.json())
-      .then(data => this.jobs = data)
-      .catch(err => console.log(err.message))
+    .then(res => res.json())
+    .then(data => this.jobs = data)
+    .catch(err => console.log(err.message))
   }
+  //--------------------------------------------
 }
 </script>
 
